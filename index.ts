@@ -38,16 +38,17 @@ do{
                 choices:todos.map(item => item),
             }, 
         ]);   
+        // updates
             let addTodo = await inquirer.prompt([
                 {
                     type:"input",
-                    message:"add item..",
+                    message:"update item..",
                     name: "todo",
                 },
             ]);
     
     let newTodos = todos.filter(val => val !== updateTodo.todo)
-    todos=[...todos, addTodo.todo]
+    todos=[...newTodos, addTodo.todo]
     console.log(todos)
      }
      
